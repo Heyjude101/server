@@ -8,6 +8,8 @@ const axios = require("axios");
 app.use(cors());
 
 const BASE_URL = process.env.BASE_URL
+const PORT = process.env.PORT || 4000
+
 
 const authy = async (req, res , next)=>{
     expressJwt({
@@ -47,6 +49,6 @@ app.get("/", (req, res) => {
   res.send("hii this is index speaking");
 });
 
-app.listen(4000, () => {
+app.listen(PORT, () => {
   console.log("listening on port 4000");
 });
